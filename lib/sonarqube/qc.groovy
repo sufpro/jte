@@ -14,7 +14,7 @@ stage('Code Quality Check via SonarQube') {
    node {
        def scannerHome = tool 'sonarqube-scanner';
            withSonarQubeEnv() {
-           sh "${tool('sonarqube-scanner')}/bin/sonar-scanner
+           sh "${tool('sonarqube-scanner')}/bin/sonar-scanner"
            }
         }
    }
