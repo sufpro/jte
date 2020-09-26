@@ -1,7 +1,7 @@
 void call() {
 stage('Code Quality Check via SonarQube') {
 
-  //config vars
+/*  //config vars
   projectKey= config.productKey
   sources= config.sources
   tests= config.tests 
@@ -16,6 +16,6 @@ stage('Code Quality Check via SonarQube') {
            withSonarQubeEnv() {
            sh "${tool('sonarqube-scanner')}/bin/sonar-scanner
            }
-        }
+        }*/
    }
 }
