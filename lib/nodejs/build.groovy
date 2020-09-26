@@ -1,11 +1,13 @@
 void call() {
     stage('Install dependencies') {
-      steps {
+      node {
+        sh 'npm install'
       }
     }
      
     stage('Test') {
-      steps {
+      node {
+        sh 'npm test'
       }
     }
 }
