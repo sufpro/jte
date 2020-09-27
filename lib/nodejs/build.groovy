@@ -1,10 +1,12 @@
 void call() {
 
 node {
-    env.NODEJS_HOME = "${tool 'nodeproject'}/bin"
+env.NODEJS_HOME = "${tool 'nodeproject'}"
     // on linux / mac
-    env.PATH="${env.NODEJS_HOME};${env.PATH}"
+    env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+    println "------=========" + env.PATH
     sh 'npm --version'
+
 }
 
 
