@@ -1,6 +1,7 @@
 void call() {
     stage('Install dependencies') {
-        sh 'npm install'
+       String npmCommand = 'npm install'
+       sh npmCommand
     }
      
     stage('Test') {
