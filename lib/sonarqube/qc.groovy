@@ -3,6 +3,7 @@ node {
 stage('SonarQube analysis') {
     def scannerHome = tool 'sonarqube-scanner';
     withSonarQubeEnv() { // If you have configured more than one global server connection, you can specify its name
+      println "aaaaaaaaa" + config.projectKey
       sh "${scannerHome}/bin/sonar-scanner \
            -Dsonar.projectKey=" + config.projectKey + " \
            -Dsonar.sources=" + config.sources + " \
