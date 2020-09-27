@@ -6,7 +6,7 @@ node {
     env.PATH="${env.NODEJS_HOME1}/bin:${env.PATH}"
     withSonarQubeEnv() { // If you have configured more than one global server connection, you can specify its name
     println 'xxxx' + config.projectKey
-	sh "${scannerHome}/bin/sonar-scanner
+	sh "${scannerHome}/bin/sonar-scanner"
 }
 }
 }
