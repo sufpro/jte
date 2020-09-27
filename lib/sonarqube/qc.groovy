@@ -2,11 +2,11 @@ void call() {
 
 
 node {
-    //env.NODEJS_HOME = "${tool 'nodeproject'}"
+    env.SONAR_HOME = "${tool 'sonarqube-scanner'}"
     // on linux / mac
-    //env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+    env.PATH="${env.SONAR_HOME}/bin:${env.PATH}"
 
-
+       println 'xxxxxxxxxxxxxxxxxxxxxx-----------xxxxxxxxxxxxxx' + config.projectKey
 
 
 stage('Code Quality Check via SonarQube') {
