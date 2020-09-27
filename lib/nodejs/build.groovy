@@ -1,6 +1,6 @@
 void call() {
     stage('Install dependencies') {
-node {
+nodejs {
            sh "${tool('nodeproject')}/bin/npm install"
     }
     } 
