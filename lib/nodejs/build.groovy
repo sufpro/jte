@@ -3,7 +3,7 @@ void call() {
 
 
     stage('Install Dependencies') {
-            steps {
+            node {
                 nodejs() {
                     sh 'npm install'
                 }
