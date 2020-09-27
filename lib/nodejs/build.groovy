@@ -1,14 +1,14 @@
 void call() {
 
-
-
-    stage('Install Dependencies') {
-            node {
-                nodejs() {
-                    sh 'npm install'
+tools {nodejs "nodeproject"}
+ 
+stages {
+        stage('Build') {
+            steps {
+                    sh 'npm config ls'
                 }
             }
         }
-
+    }
 
 }
