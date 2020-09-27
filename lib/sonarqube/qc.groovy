@@ -1,4 +1,14 @@
 void call() {
+
+
+node {
+    //env.NODEJS_HOME = "${tool 'nodeproject'}"
+    // on linux / mac
+    //env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+
+
+
+
 stage('Code Quality Check via SonarQube') {
        println 'xxxxxxxxxxxxxxxxxxxxxx-----------xxxxxxxxxxxxxx' + config.projectKey
        def scannerHome = tool 'sonarqube-scanner';
@@ -13,4 +23,5 @@ stage('Code Quality Check via SonarQube') {
            -Dsonar.testExecutionReportPaths=" + config.testExecutionReportPath
           }
         }
+}
 }
