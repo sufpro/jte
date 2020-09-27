@@ -1,7 +1,6 @@
 void call() {
 stage('Code Quality Check via SonarQube') {
-
-   node {
+       println config.projectKey
        def scannerHome = tool 'sonarqube-scanner';
            withSonarQubeEnv() {
            sh "${tool('sonarqube-scanner')}/bin/sonar-scanner \
@@ -14,5 +13,4 @@ stage('Code Quality Check via SonarQube') {
            -Dsonar.testExecutionReportPaths=" + config.testExecutionReportPath
           }
         }
-   }
 }
