@@ -2,7 +2,7 @@ void call() {
 
 
 node {
-    env.SONAR_HOME = "${tool 'sonarqube-scanner'}"
+    env.SONAR_HOME = "${tool 'sonarqube-container'}"
     // on linux / mac
     env.PATH="${env.SONAR_HOME}/bin:${env.PATH}"
 
