@@ -1,4 +1,6 @@
 libraries {
     merge = true
-    // sonarqube
+    sonarqube {
+     merge = true
+   }
 }
