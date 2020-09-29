@@ -5,6 +5,7 @@ node {
     // on linux / mac
     env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
     println 'xxxx' + config.xx
+    println env.NODEJS_HOME
 stage('Cloning Git') {
         git 'https://github.com/sufpro/NodeSonarExample.git'
 }
