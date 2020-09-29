@@ -6,6 +6,7 @@ node {
     env.NODEJS_HOME = "${tool 'nodeproject'}"
     env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
     println 'environment=' + config.env
+    withSonarQubeEnv() { 
 	 //sh "sonar-scanner"
          sh 'npm run sonar'
 }
