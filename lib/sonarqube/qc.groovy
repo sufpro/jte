@@ -8,7 +8,7 @@ node {
     println 'environment=' + config.env
 
     withSonarQubeEnv() { // If you have configured more than one global server connection, you can specify its name
-	 println ${NODEJS_HOME1}
+	 println $NODEJS_HOME1
          //sh "${NODEJS_HOME1}/bin/sonar-scanner"
 	 sh "sonar-scanner"
 }
