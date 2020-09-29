@@ -9,6 +9,6 @@ node {
     withSonarQubeEnv() { 
 	 //sh "sonar-scanner"
          sh 'npm run sonar'
-}
+    }
 }
 }
